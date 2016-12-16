@@ -41,8 +41,8 @@
       else
       {
         print '<script>alert("Incorrect Password!");</script>';
-        //redirects to managerlogin.php
-        print '<script>window.location.assign("managerlogin.php");</script>';
+        //redirects to managerloginpage.php
+        print '<script>window.location.assign("managerloginpage.php");</script>';
       }
   }
   //if table does not exist or no existing username in table

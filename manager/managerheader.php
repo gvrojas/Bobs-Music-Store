@@ -46,7 +46,7 @@
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="managerindex.php"><span class="glyphicon glyphicon-user"></span>My account</a></li>
-					<li><a href="managerlogout.php"><span class="glyphicon glyphicon-user"></span>Logout</a></li>
+					<li><a href="managerlogout.php"><span class="glyphicon glyphicon-user"></span>Logout</a></li> 
 					</ul>
 				</div>
 			</div>
