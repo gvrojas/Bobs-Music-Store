@@ -57,9 +57,10 @@
     //if there are no conflicts of username or email
     if($bool)
     {
+     
       //insert the values to table admins
       mysqli_query($db, "INSERT INTO admins (admin_FName, admin_LName, admin_Email, admin_Username, admin_Password) 
-        VALUES ('$first_name', '$last_name', '$email_address', '$user_name', '$password')");
+        VALUES ('$first_name', '$last_name', '$email_address', '$user_name', '$hashed_password')");
       //prompt to let user know registration was successful
       print '<script>alert("Successfully registered!");</script>';
     }

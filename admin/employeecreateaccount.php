@@ -1,9 +1,10 @@
 <?php include 'adminheader.php'; ?>
-<html>
-<body>
+<!--The form to create a new employee account.
+Info posted is sent to employeeaccountconfirm.php-->
 
-<h1 style="padding-left:200px">Create Manager Account</h1>
-<form action="manageraccountconfirm.php" method="POST" style="width:60%; padding-left:200px">
+<html>
+<h1 style="padding-left:200px">Create Employee Account</h1>
+<form action="employeeaccountconfirm.php" method="POST" style="width:60%; padding-left:200px">
   <div class="form-group">
     <label>First Name:</label>
     <input class="form-control" type="text" name="firstname" placeholder="Firstname" required>
@@ -13,8 +14,16 @@
     <input class="form-control" type="text" name="lastname" placeholder="Lastname" required>
   </div>
   <div class="form-group">
-    <label>Email:</label>
-    <input class="form-control" type="email" name="email" placeholder="Email" required>
+    <label>Phone:</label>
+    <input class="form-control" type="tel" name="phone" placeholder="123-456-7890" pattern="^\d{3}-\d{3}-\d{4}$" required>
+  </div>
+  <div class="form-group">
+    <label>Address:</label>
+    <input class="form-control" type="text" name="address" placeholder="123 Street Name, City, State, Zipcode" required>
+  </div>
+  <div class="form-group">
+    <label>Date of Birth:</label>
+    <input class="form-control" type="text" name="dob" placeholder="YYYY-MM-DD" pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])" required>
   </div>
   <div class="form-group">
     <label>Username:</label>
@@ -36,9 +45,14 @@
             	input.setCustomValidity('');
         	}
     	}
-     </script>
-     </div>
-     <button type="submit" class="btn btn-primary"/>Sign Up</button>
- </form>
-<?php include '../footer.php'; ?>
+	</script>
+	</div>
+  <div class="form-group">
+    <label>SSN:</label>
+    <input class="form-control" type="text" name="ssn" placeholder="000-00-0000" pattern="\d{3}-?\d{2}-?\d{4}" required>
+  </div>
+	<button type="submit" class="btn btn-primary" name="submit">Register</button>
+	</form>
+  	<?php include '../footer.php'; ?>
 </body>
+</html>

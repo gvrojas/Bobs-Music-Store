@@ -1,6 +1,6 @@
 <?php
 
-  /*When the admin goes to create an employee account, it
+  /*When the employee goes to create an employee account, it
     checks that the username has not already been used.
      If not, it successfully creates the employee account.*/
 
@@ -37,8 +37,8 @@
         $bool = false;
         //tell the user that the username has been taken
         print '<script>alert("Username has been taken!");</script>';
-        //redirects to createaccount.php
-        print '<script>window.location.assign("createemployeeaccount.php");</script>';
+        //redirects to employeecreateaccount.php
+        print '<script>window.location.assign("employeecreateaccount.php");</script>';
       }
 
 
@@ -47,7 +47,7 @@
     //if there are no conflicts of username
     if($bool)
     {
-      //insert the values to table admins
+      //insert the values to table employee
       mysqli_query($db, "INSERT INTO employee (e_FName, e_LName, e_Phone, e_Address, e_DOB, e_Username, e_Password, SSN) 
         VALUES ('$first_name', '$last_name', '$phone', '$address', '$dob', '$user_name', '$password', '$ssn')");
       //prompt to let user know registration was succesful
