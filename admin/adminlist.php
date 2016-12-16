@@ -39,7 +39,6 @@
 		<td>Last Name</td>
 		<td>Email</td>
 		<td>Username</td>
-		<td>Delete Admin Account</td>
 		</tr>
 
 
@@ -50,8 +49,6 @@
 			<td><?php echo $admin['admin_LName']; ?></td>
 			<td><?php echo $admin['admin_Email']; ?></td>
 			<td><?php echo $admin['admin_Username']; ?></td>
-			<!--creates a link which allows admin to delete the user based on 'id'-->
-			<td><a href="deleteadmin.php?id=<?php echo $admin['admin_Username']; ?>">Delete</a></td>
 			</tr>
 		<?php endforeach; ?></p>
 
